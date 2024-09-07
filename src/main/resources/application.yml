@@ -1,0 +1,17 @@
+server:
+  port: 8080  # Le port sur lequel votre application s'exécute
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/mydatabase
+    username: myuser
+    password: mypassword
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update  # 'create', 'update', 'validate', ou 'none'
+    show-sql: true  # Affiche les requêtes SQL dans la console
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect  # Dialecte spécifique à PostgreSQL
